@@ -134,3 +134,89 @@
     - `setTheme('light')` to `setTheme('dark')`
 - Click on settings wheel in bottom right corner to change font size, speed, etc.
   - Also where you can download the code as a ZIP
+
+### Your first web app
+
+#### 1. Add your Name and Emoji
+
+- Web app that is personalized, unique, and just for you
+- Technologies used to run the web app
+  - CSS
+    - Colors, backgrounds, fonts, variables
+  - JavaScript
+    - Conditionals, loops, fetch, functions
+  - React
+    - Props, APIs, hooks, JSX, state
+  - Scary words &rarr; concepts and technologies that are being used to render the web app in the browser
+    - Scary, but you need to get comfortable with the fact that when working as a frontend developer you are always standing on the shoulders of giants and there are always things going on under the hood that you do not understand
+  - Have to accept that you will sometimes work on and-or with things you do not understand
+    - ~80 lines of scary, hideous code you have to work w/
+      - Limited to modifying a few lines
+      - Only worry about/try to understand the lines you are modifying
+- Make it your website
+  - Change the name from 'Someone' to your name and change the emoji
+    - `ReactDOM.render(<App name="Someone" emoji="👋" />, document.getElementByID("root"));` &rarr;
+    - `ReactDOM.render(<App name="Matthew" emoji="🦄" />, document.getElementByID("root"));`
+    - Can copy and paste an emoji from [getemoji.com](https://getemoji.com/)
+  - Site is still boring, so we need to populate it with content
+
+#### 2. Display Photos
+
+- In index.js, the return(...); statement (function?) (i.e. the code) is set up to display pictures
+  - No pictures are currently being displayed because there is nothing specifying what kind of photos to display on the website
+    - Specify on line 24 of index.js
+      - Uses a modern React concept called Hooks (Do not worry about this now, just be aware of it)
+    - Set up the app so that it starts off with an initial state
+      - Initial state &rarr; Whatever you put into useState("") on line 24 of index.js
+      - Fill in w/ name of subject that you want your website to be populated w/ images of &rarr; refresh the code and observe the result
+- How are pictures "magically" showing up on the page?
+  - Use of an API (line 29 of index.js)
+    - Unsplash is a website that contains free to use images
+    - Our app sent a request to Unsplash requesting images &rarr; Unsplash said yes &rarr; Unsplash sent images of our specified subject back to our app &rarr; Our app took that date (images) and rendered out the photos
+      - Using Internet infrastructure to construct something which pulls data from a third party source
+- Now, change the background color, fonts, etc. to better match your subject selection
+
+#### 3. Change the Background Image
+
+- Personalize your website by styling it
+  - Style websites by working with CSS (Cascading Style Sheets)
+    - Go into style.css file
+      - Note the background options under the root section (lines 3 through 12 of style.css)
+      - Change the background to one you like
+        - Modify line 44 of style.css
+          - `--background-image: var(--wooden);` &rarr; `--background-image: var(--rainbow);`
+      - Only changing what is in the var statements
+
+#### 4. Choose a Color
+
+- Change the font, border, etc. color to suit the subject you chose
+  - Still in style.css
+  - Note the color options under the root section
+  - Modify line 49 of style.css
+    - `--main-color: var(--snow)` &rarr; `--main-color: var(--gloom)`
+- Important aspect of coding is that one variable can change many things on the page
+  - Main reason we use variables
+
+#### 5. Set the Font, Border, and Column Count
+
+- Change the font family to one you like better
+  - Still in style.css
+  - Note the font options under the root section
+  - Modify line 54 of style.css
+    - `font-family: var(--simple-font);` &rarr; `font-family: var(--curly-font);`
+- Adjust how many columns you would like to have
+  - Modify line 60 of style.css
+    - `column-count: 2;` &rarr; `column-count: 3;`
+- Choose your favorite border
+  - Uncomment the code (lines 71 and 73 in style.css)
+  - Modify line 72 of style.css
+    - Use the variables available for backgrounds
+    - `/* border-image: var(--sweets) 100; */` &rarr; `border-image: var(--nightsky) 100;`
+- Note how we modify different sections in style.css
+  - E.g. body, grid, etc.
+
+#### 6. Share your website
+
+- Share your solution
+  - Do the mini challenges (again) to make the website your style
+  - Share a screenshot in the i-built-this channel on Discord
